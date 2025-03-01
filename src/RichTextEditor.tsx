@@ -1,23 +1,23 @@
-import { Box, Flex } from "@chakra-ui/react";
-import React, { useMemo } from "react";
+import { Box } from "@chakra-ui/react";
 import { LexicalComposer } from "@lexical/react/LexicalComposer";
 import { HeadingNode } from "@lexical/rich-text";
+import React, { useMemo } from "react";
 
-import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
+import { css } from "@emotion/css";
+import { CodeHighlightNode, CodeNode } from "@lexical/code";
+import { ListItemNode, ListNode } from "@lexical/list";
+import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";
 import { ContentEditable } from "@lexical/react/LexicalContentEditable";
 import { LexicalErrorBoundary } from "@lexical/react/LexicalErrorBoundary";
-import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";
 import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
 import { ListPlugin } from "@lexical/react/LexicalListPlugin";
-import { css } from "@emotion/css";
+import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
+import { TableCellNode, TableNode, TableRowNode } from "@lexical/table";
+import { ImageNode } from "./nodes/ImageNode";
+import { YoutubeNode } from "./nodes/YoutubeNode";
 import { ToolbarPlugin } from "./Plugins";
 import CustomOnChangePlugin from "./Plugins/CustomOnChangePlugin";
 import { theme } from "./theme";
-import { ListNode, ListItemNode } from "@lexical/list";
-import { TableNode, TableCellNode, TableRowNode } from "@lexical/table";
-import { CodeNode, CodeHighlightNode } from "@lexical/code";
-import { ImageNode } from "./nodes/ImageNode";
-import { YoutubeNode } from "./nodes/YoutubeNode";
 
 interface RichTextEditorProps {
   value: string;
